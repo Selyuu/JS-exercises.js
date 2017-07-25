@@ -1,0 +1,34 @@
+// Pig Latin Javascript
+
+/* Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules. */
+
+var input = 'lower'
+
+function pigLatin(str) {
+  var endOfWord = str.slice(1, str.length)
+  var startLetter = str.substr(0, 1)
+  return endOfWord + '-' + startLetter + 'ay'
+}
+
+pigLatin(input)
+
+// Count Vowels
+
+function countVowel(str) {
+
+}
+
+// Two Different Arrays
+
+function diffArray(arr1, arr2) {
+  var result = []
+  var newArr = arr1.concat(arr2)
+  newArr.filter(function(word, i) {
+    if ((arr1.indexOf(word) === -1) || (arr2.indexOf(word) === -1)) {
+      result.push(word)
+    }
+  })
+  return result
+}
+
+console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
