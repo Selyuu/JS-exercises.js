@@ -15,7 +15,16 @@ pigLatin(input)
 // Count Vowels
 
 function countVowel(str) {
+  var check = str.toLowerCase().split('')
+  var vowels = ['a', 'e', 'i', 'o', 'u']
+  var vowelCount = 0
 
+  check.filter(function(letter) {
+    if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+      vowelCount++
+    }
+  })
+  return vowelCount
 }
 
 // Two Different Arrays
@@ -32,3 +41,5 @@ function diffArray(arr1, arr2) {
 }
 
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+
+// Roman Numeral Converter
