@@ -64,6 +64,10 @@ function romanConvert(num) {
   if (num === 0) {
     return ''
   }
-  for (var i = 0; i < )
+  for (var i = 0; i < romanMatrix.length; i++) {
+    if (num >= romanMatrix[i][0]) {
+      return romanMatrix[i][1] + romanConvert(num - romanMatrix[i][0])
+    }
+  }
 }
 
