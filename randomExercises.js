@@ -43,3 +43,27 @@ function diffArray(arr1, arr2) {
 console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]))
 
 // Roman Numeral Converter
+
+var romanMatrix = [
+  [1000, 'M'],
+  [900, 'CM'],
+  [500, 'D'],
+  [400, 'CD'],
+  [100, 'C'],
+  [90, 'XC'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [9, 'IX'],
+  [5, 'V'],
+  [4, 'IV'],
+  [1, 'I']
+]
+
+function romanConvert(num) {
+  if (num === 0) {
+    return ''
+  }
+  for (var i = 0; i < )
+}
+
