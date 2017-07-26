@@ -71,3 +71,13 @@ function romanConvert(num) {
   }
 }
 
+// Shortest Word
+
+function findShort(sentence){
+ var result = 0
+ var wordCheck = sentence.split('')
+ for (var i = 0; i < wordCheck.length; i++) {
+  if ()
+ }
+}
+
