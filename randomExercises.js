@@ -122,3 +122,4 @@ function numberCompare(firstNum, secondNum) {
   }
 }
 
+   
