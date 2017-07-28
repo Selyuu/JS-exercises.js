@@ -110,3 +110,15 @@ function followingDay(input) {
   }
 }
 
+// Number comparison
+
+function numberCompare(firstNum, secondNum) {
+  if (firstNum > secondNum) {
+    console.log(`${firstNum} is more than ${secondNum}`)
+  } else if (firstNum < secondNum) {
+    console.log(`${secondNum} is more than ${firstNum}`)
+  } else {
+    console.log('Both numbers are equal')
+  }
+}
+
