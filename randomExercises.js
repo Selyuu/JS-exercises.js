@@ -73,11 +73,40 @@ function romanConvert(num) {
 
 // Shortest Word
 
-function findShort(sentence){
+function findShort(sentence) {
  var result = 0
  var wordCheck = sentence.split('')
  for (var i = 0; i < wordCheck.length; i++) {
   if ()
  }
+}
+
+// Following day
+
+function followingDay(input) {
+  console.log('Next day is ')
+  switch (input) {
+    case 'monday':
+      console.log('tuesday')
+      break
+    case 'tuesday':
+      console.log('wednesday')
+      break
+    case 'wednesday':
+      console.log('thursday')
+      break
+    case 'thursday':
+      console.log('friday')
+      break
+    case 'friday':
+      console.log('saturday')
+      break
+    case 'saturday':
+      console.log('sunday')
+      break
+    case 'sunday':
+      console.log('monday')
+      break      
+  }
 }
 
