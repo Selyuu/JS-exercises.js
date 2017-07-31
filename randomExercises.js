@@ -138,3 +138,16 @@ const gameCharacter = {
   }
 }  
 
+// Dog Object
+
+const dogObj = {
+  name: 'Pagchun',
+  species: 'pug',
+  size: 'small',
+  bark() {
+    return 'woof!'
+  }
+}
+
+console.log(`${dog.name} is a ${dog.species} dog that is ${dog.size} in size`);
+console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
