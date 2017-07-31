@@ -149,5 +149,22 @@ const dogObj = {
   }
 }
 
-console.log(`${dog.name} is a ${dog.species} dog that is ${dog.size} in size`);
-console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`);
+console.log(`${dog.name} is a ${dog.species} dog that is ${dog.size} in size`)
+console.log(`Look, a cat! ${dog.name} barks: ${dog.bark()}`)
+
+// Circle Object
+
+const r = Number(prompt("Enter the circle radius:"))
+
+const circle = {
+  circumference() {
+    let diameter = r * 2
+    return Math.PI * diameter
+  },
+  area() {
+    return Math.PI * (r ** 2)
+  }
+}
+
+console.log(`Its circumference is ${circle.circumference()}`)
+console.log(`Its area is ${circle.area()}`)
