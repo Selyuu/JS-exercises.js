@@ -129,11 +129,12 @@ const gameCharacter = {
   health: 150,
   strength: 45,
   isIll: false,
+  experience: 370,
   battleCry() {
     return 'RAWR'
   },
   describe() {
-    return `${character.name} has ${character.health} HP and ${character.strength} STR. This character's battle cry is ${character.battleCry()}`
+    return `${this.name} has ${this.health} HP and ${this.strength} STR. This character's battle cry is ${this.battleCry()}. This character currently has ${this.experience} experience points.`
   }
 }  
 
