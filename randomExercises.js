@@ -122,4 +122,18 @@ function numberCompare(firstNum, secondNum) {
   }
 }
 
-   
+// Object Play
+
+const gameCharacter = {
+  name: 'Selyuu',
+  health: 150,
+  strength: 45,
+  isIll: false,
+  battleCry() {
+    return 'RAWR'
+  },
+  describe() {
+    return `${character.name} has ${character.health} HP and ${character.strength} STR. This character's battle cry is ${character.battleCry()}`
+  }
+}  
+
