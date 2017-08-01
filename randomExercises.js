@@ -228,3 +228,17 @@ for (const num of values) {
     result = num
   }
 }
+
+// List of words
+function wordSentence() {
+  let result = []
+  let word = ''
+  while (word !== 'stop') {
+    word = prompt('Give me a word')
+    if (word === 'stop') {
+      return result
+    } else {
+      result.push(word)
+    }
+  }
+}
