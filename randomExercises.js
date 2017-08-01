@@ -168,3 +168,43 @@ const circle = {
 
 console.log(`Its circumference is ${circle.circumference()}`)
 console.log(`Its area is ${circle.area()}`)
+
+// Bank Account Object
+
+const account = {
+  name: 'Alex',
+  balance: 0,
+  credit(num) {
+    return balance += num
+  },
+  describe() {
+    return `The owner of this account is ${this.name} who has a current balance of ${this.balance}.`
+  }
+}
+
+// Array iteration
+const movies = ['The wolf of wall street', 'Gravity', 'Cars 2']
+
+movies.forEach(movie => {
+  console.log(movie)
+})
+
+for (const movie of movies) {
+  console.log(movie)
+}
+
+// Musketeers Array
+const musketeers = ['Athos', 'Porthos', 'Aramis']
+
+for (let i = 0; i < musketeers.length; i++) {
+  console.log(musketeers[i])
+}
+
+musketeers.push('D\'Artagnan')
+
+musketeers.forEach(musketeer => {
+  console.log(musketeer)
+})
+
+
+
