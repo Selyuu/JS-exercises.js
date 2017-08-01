@@ -206,5 +206,19 @@ musketeers.forEach(musketeer => {
   console.log(musketeer)
 })
 
+musketeers.splice(2, 1)
 
+for (const musketeer of musketeers) {
+  console.log(musketeer)
+}
+
+// Sum of values
+const values = [3, 11, 7, 2, 9, 10]
+let result = 0
+
+values.forEach(num => {
+  result += num
+})
+
+// Array maximum
 
