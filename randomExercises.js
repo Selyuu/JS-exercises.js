@@ -257,3 +257,22 @@ const vowelCount = word => {
   })
   return count
 }
+
+// Reverse a string (recursive)
+const stringReverse = str => {
+  if (str === '') {
+    return ''
+  } else {
+    return stringReverse(str.substr(1)) + str.charAt(0)
+  }
+}
+
+// Palindrome
+const palindromeChecker = str => {
+  let strReversed = stringReverse(str.toLowerCase())
+  if (str.toLowerCase() === strReversed) {
+    return `${str} is a palindrome`
+  } else {
+    return `${str} is not a palindrome`
+  }
+}
