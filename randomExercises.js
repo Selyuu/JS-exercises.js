@@ -242,3 +242,18 @@ function wordSentence() {
     }
   }
 }
+
+// Word Function
+const wordProperties = word => {`${word.length} is the length, ${word.toUpperCase()} is the uppercase and ${word.toLowerCase()} is the lowercase.`}
+
+// Vowel Function
+const vowelCount = word => {
+  let count = 0
+  const wordArray = word.split('')
+  wordArray.forEach(letter => {
+    if ((letter === 'a') || (letter === 'e') || (letter === 'i') || (letter === 'o') || (letter === 'u')) {
+      count++
+    }
+  })
+  return count
+}
