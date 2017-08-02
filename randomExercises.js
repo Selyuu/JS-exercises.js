@@ -276,3 +276,37 @@ const palindromeChecker = str => {
     return `${str} is not a palindrome`
   }
 }
+
+// Javascript Class
+class Character {
+  constructor(name, health, strength) {
+    this.name = name
+    this.health = health
+    this.strength = strength
+    this.xp = 0
+  }
+  describe() {
+    return `${this.name} has ${this.health} HP, ${this.strength} as strength and ${this.xp} XP points`
+  }
+  attack(target) {
+    if (this.health > 0) {
+      const damage = this.strength
+      console.log(
+        `${this.name} attacks ${target.name} and causes ${damage} damage points`
+      )
+      target.health -= damage
+      if (target.health > 0) {
+        console.log(`${target.name} has ${target.health} HP left`)
+      } else {
+        target.health = 0
+        const bonusXP = 10
+        console.log(
+          `${this.name} eliminated ${target.name} and wins ${bonusXP} XP`
+        )
+        this.xp += bonusXP
+      }
+    } else {
+      console.log(`${this.name} can't attack as this target has already been eliminated`)
+    }
+  }
+}
