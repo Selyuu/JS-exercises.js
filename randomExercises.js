@@ -288,7 +288,7 @@ class Character {
     this.keys = 1
   }
   describe() {
-    return `${this.name} has ${this.health} HP, ${this.strength} as strength and ${this.xp} XP points. This character also has ${this.gold} piece(s) and ${this.keys} key(s) in their inventory.`
+    return `${this.name} has ${this.health} HP, ${this.strength} as strength and ${this.xp} XP points. This character also has ${this.gold} gold piece(s) and ${this.keys} key(s) in their inventory.`
   }
   attack(target) {
     if (this.health > 0) {
@@ -335,5 +335,24 @@ const fang = new Dog("Fang", "boarhound", 75);
 console.log(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
 console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
 
+// Bank Account Object 
+class Account {
+  constructor(name) {
+    this.name = name
+    this.amount = 0
+  }
+  credit(add) {
+    return this.amount += add
+  }
+  describe() {
+    return `Owner: ${this.name}, balance: ${this.amount}`
+  }
+}
 
+const sean = new Account('Sean')
+const brad = new Account('Brad')
+const george = new Account('George')
 
+let accountArray = [sean, brad, george]
+
+accountArray.forEach(account => account.amount += 1000)
