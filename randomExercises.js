@@ -284,9 +284,11 @@ class Character {
     this.health = health
     this.strength = strength
     this.xp = 0
+    this.gold = 10
+    this.keys = 1
   }
   describe() {
-    return `${this.name} has ${this.health} HP, ${this.strength} as strength and ${this.xp} XP points`
+    return `${this.name} has ${this.health} HP, ${this.strength} as strength and ${this.xp} XP points. This character also has ${this.gold} piece(s) and ${this.keys} key(s) in their inventory.`
   }
   attack(target) {
     if (this.health > 0) {
@@ -304,6 +306,8 @@ class Character {
           `${this.name} eliminated ${target.name} and wins ${bonusXP} XP`
         )
         this.xp += bonusXP
+        this.gold += target.gold
+        this.key += target.keys
       }
     } else {
       console.log(`${this.name} can't attack as this target has already been eliminated`)
@@ -330,7 +334,6 @@ class Dog {
 const fang = new Dog("Fang", "boarhound", 75);
 console.log(`${fang.name} is a ${fang.species} dog measuring ${fang.size}`);
 console.log(`Look, a cat! ${fang.name} barks: ${fang.bark()}`);
-
 
 
 
