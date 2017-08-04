@@ -406,8 +406,40 @@ const movieList = [
     director: "Christopher Nolan",
     imdbRating: 8.5
   }
-];
+]
 
 const moviesBefore2000 = movieList.filter(movie => movie.year < 2000).map(movie => movie.title)
 
-console.log(moviesBefore2000);
+console.log(moviesBefore2000)
+
+// More
+const governmentForms = [
+  {
+    name: "Plutocracy",
+    definition: "Rule by the wealthy"
+  },
+  {
+    name: "Oligarchy",
+    definition: "Rule by a small number of people"
+  },
+  {
+    name: "Kleptocracy",
+    definition: "Rule by the thieves"
+  },
+  {
+    name: "Theocracy",
+    definition: "Rule by a religious elite"
+  },
+  {
+    name: "Democracy",
+    definition: "Rule by the people"
+  },
+  {
+    name: "Autocracy",
+    definition: "Rule by a single person"
+  }
+]
+
+const formsEndingWithCy = governmentForms.map(name => name.name)
+
+console.log(formsEndingWithCy);
