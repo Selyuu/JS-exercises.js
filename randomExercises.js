@@ -356,3 +356,8 @@ const george = new Account('George')
 let accountArray = [sean, brad, george]
 
 accountArray.forEach(account => account.amount += 1000)
+
+// Reduce
+const numbers = [1, 5, 10, 15];
+
+const totalAmount = numbers.reduce((acc, total) => acc + total, 0) / numbers.length
