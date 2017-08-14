@@ -462,3 +462,6 @@ const countPosSumNeg = nums => {
   result.push(posNum, negNum)
   return result
 }
+
+// Last item in an array
+const lastItemArray = arr => arr[arr.length - 1]
