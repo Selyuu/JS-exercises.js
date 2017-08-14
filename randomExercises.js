@@ -453,11 +453,12 @@ console.log(arraysSum)
 
 // Count Positive & Negative 
 const countPosSumNeg = nums => {
-  if ((nums.length === 0) || (nums === null)) {
+  if ((nums === false) || (nums.length === 0)) {
     return []
   }
   result = []
-  let posNum = nums.filter(num => num > 0).reduce((acc, val) => acc + val, 0)
-  let negNum = nums.filter(num => num < 0).reduce((acc, val) acc + val, 0)
+  let posNum = nums.filter(num => num > 0).length
+  let negNum = nums.filter(num => num < 0).reduce((acc, val) => acc + val, 0)
   result.push(posNum, negNum)
+  return result
 }
