@@ -443,3 +443,21 @@ const governmentForms = [
 const formsEndingWithCy = governmentForms.map(name => name.name)
 
 console.log(formsEndingWithCy);
+
+// Sum of Array
+const arrays = [[1, 4], [11], [3, 5, 7]];
+
+const arraysSum = arrays.reduce()
+
+console.log(arraysSum)
+
+// Count Positive & Negative 
+const countPosSumNeg = nums => {
+  if ((nums.length === 0) || (nums === null)) {
+    return []
+  }
+  result = []
+  let posNum = nums.filter(num => num > 0).reduce((acc, val) => acc + val, 0)
+  let negNum = nums.filter(num => num < 0).reduce((acc, val) acc + val, 0)
+  result.push(posNum, negNum)
+}
