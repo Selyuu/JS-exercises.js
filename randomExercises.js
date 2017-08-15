@@ -465,3 +465,22 @@ const countPosSumNeg = nums => {
 
 // Last item in an array
 const lastItemArray = arr => arr[arr.length - 1]
+
+// Number even or odd
+const isEvenOrOdd = num => {
+  if (num % 2 === 0) {
+    return `even`
+  }
+  return `odd`
+}
+
+// Count words
+const countWords = str => str.split(' ').length
+
+// Name Shuffle
+const nameShuffle = str => {
+  let result = []
+  let newStr = str.split(' ')
+  result.push(newStr[1], newStr[0])
+  return result.join(' ')
+}
