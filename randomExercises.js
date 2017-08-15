@@ -484,3 +484,6 @@ const nameShuffle = str => {
   result.push(newStr[1], newStr[0])
   return result.join(' ')
 }
+
+// Alphabet soup
+const alphabetSoup = str => str.split('').sort().join('')
