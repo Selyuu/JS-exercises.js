@@ -488,5 +488,8 @@ const nameShuffle = str => {
 // Alphabet soup
 const alphabetSoup = str => str.split('').sort().join('')
 
-// Find the largest num in an array [4, 5, 1, 3]
+// Find the largest num in an array
 const findLargestNum = arr => arr.reduce((acc, number) => number > acc ? number : acc, 0)
+
+// find the smallest num in an array
+const findSmallestNum = arr => arr.reduce((acc, number) => number <= acc ? number : acc, arr[0])
