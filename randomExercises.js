@@ -523,3 +523,12 @@ const checkEnding = (str1, str2) => str1.slice((str1.length - str2.length)) === 
 
 // Absolute value
 const getAbsSum = arr => arr.reduce((acc, val) => Math.abs(acc) + Math.abs(val) ,0)
+
+// Date checker for Christmas Eve
+const timeForMilkAndCookies = date => date.getMonth() === 11 && date.getDate() === 24 ? true : false
+
+// Filter strings
+const filterArray = arr => arr.filter(item => typeof(item) !== 'string')
+
+
+
