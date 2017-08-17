@@ -530,5 +530,8 @@ const timeForMilkAndCookies = date => date.getMonth() === 11 && date.getDate() =
 // Filter strings
 const filterArray = arr => arr.filter(item => typeof(item) !== 'string')
 
+// Double letter strings
+const doubleChar = str => str.split('').map(letter => letter + letter).join('')
+
 
 
