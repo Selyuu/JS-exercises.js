@@ -520,3 +520,6 @@ const isFourLetters = arr => arr.filter(word => word.length === 4)
 
 // Check ending string
 const checkEnding = (str1, str2) => str1.slice((str1.length - str2.length)) === str2 ? true : false
+
+// Absolute value
+const getAbsSum = arr => arr.reduce((acc, val) => Math.abs(acc) + Math.abs(val) ,0)
