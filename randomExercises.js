@@ -493,3 +493,30 @@ const findLargestNum = arr => arr.reduce((acc, number) => number > acc ? number 
 
 // find the smallest num in an array
 const findSmallestNum = arr => arr.reduce((acc, number) => number <= acc ? number : acc, arr[0])
+
+// Eliminate odd numbers
+const noOdds = arr => arr.filter(num => num % 2 === 0)
+
+// Add up
+const addUp = num => {
+  let result = createArrNum(num)
+  return result.reduce((acc, val) => acc + val ,0)
+}
+
+const createArrNum = num => {
+  let result = []
+  let count = 1
+
+  while (count < num) {
+    result.push(count)
+    count++
+  }
+  result.push(num)
+  return result
+}
+
+// Four letter words
+const isFourLetters = arr => arr.filter(word => word.length === 4)
+
+// Check ending string
+const checkEnding = (str1, str2) => str1.slice((str1.length - str2.length)) === str2 ? true : false
