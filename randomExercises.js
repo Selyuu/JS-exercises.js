@@ -545,6 +545,24 @@ const silenceTrump = str => str.split('').filter(isVowel).join('')
 
 const isVowel = char => ['a', 'e', 'i', 'o', 'u'].indexOf(char.toLowerCase()) === -1
 
+// Count vowels
+const countVowels = str => {
+  let count = 0
+  str.split('').forEach(letter => isVowel(letter) ? count++ : count) 
+  return count
+}
+
+// Sort numbers
+const sortNumsAscending = arr => arr === null || arr === [] ? [] : arr.sort((a, b) => a - b)
+
+// XO check
+const XO = str => {
+  let xCount = 0
+  let oCount = 0
+  str.toLowerCase().indexOf('x') === -1 && str.toLowerCase().indexOf('o') === -1 ? 
+  true : str.toLowerCase().split('').forEach(letter => letter !== 'x' && letter !== 'o' ? '' : letter === 'x' ? xCount++ : oCount++)
+  return xCount === oCount ? true : false
+}
 
 
 
