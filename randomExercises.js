@@ -564,5 +564,19 @@ const XO = str => {
   return xCount === oCount ? true : false
 }
 
+// Min Max Length & Avg
+const minMaxLengthAverage = arr => {
+  let min = arr.reduce((acc, num) => acc < num ? acc : num)
+  let max = arr.reduce((acc, num) => acc > num ? acc : num)
+  let average = arr.reduce((acc, num) => acc + num, 0) / arr.length
+  return [min, max, arr.length, average]
+}
+
+const minMaxLengthAverage = arr => [
+  arr.reduce((acc, num) => acc < num ? acc : num), 
+  arr.reduce((acc, num) => acc > num ? acc : num),
+  arr.length,
+  arr.reduce((acc, num) => acc + num, 0) / arr.length
+]
 
 
