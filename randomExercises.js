@@ -540,4 +540,11 @@ const minMax = arr => {
   return [min, max]
 }
 
+// Silent vowels 
+const silenceTrump = str => str.split('').filter(isVowel).join('')
+
+const isVowel = char => ['a', 'e', 'i', 'o', 'u'].indexOf(char.toLowerCase()) === -1
+
+
+
 
