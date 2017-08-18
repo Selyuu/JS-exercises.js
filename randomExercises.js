@@ -533,5 +533,11 @@ const filterArray = arr => arr.filter(item => typeof(item) !== 'string')
 // Double letter strings
 const doubleChar = str => str.split('').map(letter => letter + letter).join('')
 
+// Minmax number
+const minMax = arr => {
+  let min = arr.reduce((acc, val) => acc <= val ? acc : val)
+  let max = arr.reduce((acc, val) => acc >= val? acc : val)
+  return [min, max]
+}
 
 
