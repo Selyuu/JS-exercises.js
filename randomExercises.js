@@ -579,4 +579,13 @@ const minMaxLengthAverage = arr => [
   arr.reduce((acc, num) => acc + num, 0) / arr.length
 ]
 
+// Capitalise letters
+const capMe = arr => arr.map(word => {
+  let item = word.toLowerCase()
+  return item[0].toUpperCase() + item.slice(1)
+})
 
+// Head body tail
+const verifySubstrs => (mainStr, head, body, tail) => {
+  
+}
