@@ -587,8 +587,19 @@ const capMe = arr => arr.map(word => {
 
 // Head body tail
 const verifySubstrs = (mainStr, head, body, tail) => {
+  let headCheck = mainStr.split('').splice(0, head.length)
+  console.log(headCheck)
+  let bodyCheck = mainStr.split('').splice(head.length, body.length)
+  console.log(bodyCheck)
+  let tailCheck = mainStr.split('').splice(head.length + body.length, tail.length) 
+  console.log(headCheck)
+  return headCheck.join('') === head ? bodyCheck.join('') === body ? tailCheck.join('') === tail ? 'My head, body, and tail.' : 'Incomplete.' : 'Incomplete.' : 'Incomplete.'
+}
+
+const verifySubstrs = (mainStr, head, body, tail) => {
   
 }
+
 
 // Mutations
 const mutation = arr => {
@@ -618,5 +629,7 @@ function mutation(arr) {
   }
   return true;
 }
+
+
 
 
