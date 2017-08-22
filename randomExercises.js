@@ -586,6 +586,37 @@ const capMe = arr => arr.map(word => {
 })
 
 // Head body tail
-const verifySubstrs => (mainStr, head, body, tail) => {
+const verifySubstrs = (mainStr, head, body, tail) => {
   
 }
+
+// Mutations
+const mutation = arr => {
+  let wordCheck = arr[0].toLowerCase()
+  let letterCheck = arr[1].toLowerCase().split('')
+  let result = []
+  letterCheck.forEach(letter => result.push(wordCheck.indexOf(letter)))
+  let wordFinal = result.filter(number => number < 0)
+  return wordFinal.length > 0 ? false : true
+}
+
+function mutation(arr) {
+  var wordCheck = arr[0].toLowerCase();
+  var letterCheck = arr[1].toLowerCase().split('');
+  var result = [];
+
+  for (var i = 0; i < letterCheck.length; i++) {
+    result.push(wordCheck.indexOf(letterCheck[i]));
+  }
+
+  var wordFinal = result.filter(function (number) {
+    return number < 0;
+  });
+
+  if (wordFinal.length > 0) {
+    return false;
+  }
+  return true;
+}
+
+
