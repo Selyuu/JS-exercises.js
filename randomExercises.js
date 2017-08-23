@@ -588,18 +588,23 @@ const capMe = arr => arr.map(word => {
 // Head body tail
 const verifySubstrs = (mainStr, head, body, tail) => {
   let headCheck = mainStr.split('').splice(0, head.length)
-  console.log(headCheck)
   let bodyCheck = mainStr.split('').splice(head.length, body.length)
-  console.log(bodyCheck)
   let tailCheck = mainStr.split('').splice(head.length + body.length, tail.length) 
-  console.log(headCheck)
-  return headCheck.join('') === head ? bodyCheck.join('') === body ? tailCheck.join('') === tail ? 'My head, body, and tail.' : 'Incomplete.' : 'Incomplete.' : 'Incomplete.'
+  return headCheck.join('') === head ? bodyCheck.join('') === body ? tailCheck.join('') === tail ? stringTogether(mainStr, headCheck.join(''), bodyCheck.join(''), tailCheck.join('')) : 'Incomplete.' : 'Incomplete.' : 'Incomplete.'
 }
 
-const verifySubstrs = (mainStr, head, body, tail) => {
-  
-}
+// "Centipede", "Cent", "tip", "pede"
+const verifySubstrs = (mainStr, head, body, tail) => mainStr.toLowerCase().startsWith(head) ? mainStr.includes(body) ? mainStr.endsWith(tail) ? head + body + tail === mainStr ? `My head, body, and tail.` : `Incomplete.` : `Incomplete.` : `Incomplete.` : `Incomplete.`
 
+const stringTogether = (togetherStr, headC, bodyC, tailC) => headC + bodyC + tailC === togetherStr ? `My head, body, and tail.` : `Incomplete.`
+
+/*
+  if last letter of head === first letter of body
+  // remove letter
+  if last letter of body === first letter of tail
+  // remove letter
+  join head, body, tail
+*/
 
 // Mutations
 const mutation = arr => {
@@ -630,6 +635,10 @@ function mutation(arr) {
   return true;
 }
 
+// Fizzbuzz Hacky
+const fizzBuzz = (num) => [...Array(num)].map((_, i) => i).forEach((num) => check(num))
+const check = (num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.log(`FizzBuzz`) : console.log(`Fizz`) : num % 5 === 0 ? console.log(`Buzz`) : console.log(num)
 
+fizzBuzz(100)
 
 
