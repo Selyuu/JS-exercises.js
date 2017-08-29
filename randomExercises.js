@@ -643,3 +643,11 @@ fizzBuzz(100)
 
 // Find largest num within array of arrays
 const findLargestNums = (arr) => arr.map((arr) => arr.reduce((num, val) => num > val ? num : val))
+
+// Remove duplicates within an array
+const removeDups = (arr) => {
+  let seen = new Set()
+  arr.filter((item) => !seen.has(item) ? seen.add(item) : true)
+  return [...seen]
+}
+
