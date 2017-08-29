@@ -641,4 +641,5 @@ const check = (num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.
 
 fizzBuzz(100)
 
-
+// Find largest num within array of arrays
+const findLargestNums = (arr) => arr.map((arr) => arr.reduce((num, val) => num > val ? num : val))
