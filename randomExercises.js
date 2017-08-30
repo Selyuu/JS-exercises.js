@@ -651,3 +651,16 @@ const removeDups = (arr) => {
   return [...seen]
 }
 
+const removeDups = (arr) => [...new Set(arr)]
+
+// Format phone number
+const formatPhoneNumber = (numbers) => {
+  if (digitCheck(numbers).length === 10) {
+    numbers.unshift('(')
+    numbers.splice(4, 0, ') ')
+    numbers.splice(8, 0, '-')
+    return numbers.join('')
+  }
+}
+
+const digitCheck = (numbers) => numbers.filter(num => num < 10)
