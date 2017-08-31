@@ -664,3 +664,18 @@ const formatPhoneNumber = (numbers) => {
 }
 
 const digitCheck = (numbers) => numbers.filter(num => num < 10)
+
+// Calculate mean average
+const mean = (arr) => {
+  let result = arr.reduce((acc, val) => acc + val) / arr.length
+  return Number(result.toFixed(2))
+}
+
+// Sort descending numbers
+const sortDecending = (num) => Number(num.toString().split('').sort((a, b) => a - b).reverse().join(''))
+
+String.prototype.indexOf = (searchValue, fromIndex) => {
+  if (fromIndex) {
+    return String.prototype.indexOf()
+  }
+}
