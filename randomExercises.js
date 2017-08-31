@@ -674,6 +674,7 @@ const mean = (arr) => {
 // Sort descending numbers
 const sortDecending = (num) => Number(num.toString().split('').sort((a, b) => a - b).reverse().join(''))
 
+// indexOf Function
 String.prototype.indexOf = (searchValue, fromIndex) => {
   if (fromIndex) {
     return String.prototype.indexOf()
