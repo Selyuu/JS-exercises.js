@@ -635,12 +635,6 @@ function mutation(arr) {
   return true;
 }
 
-// Fizzbuzz Hacky
-const fizzBuzz = (num) => [...Array(num)].map((_, i) => i).forEach((num) => check(num))
-const check = (num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.log(`FizzBuzz`) : console.log(`Fizz`) : num % 5 === 0 ? console.log(`Buzz`) : console.log(num)
-
-fizzBuzz(100)
-
 // Find largest num within array of arrays
 const findLargestNums = (arr) => arr.map((arr) => arr.reduce((num, val) => num > val ? num : val))
 
@@ -687,3 +681,7 @@ const binarySearch = (d, t, s, e) => {
   if (t == d[m].svgX) return d[m]
   if 
 }
+
+// Fizzbuzz Hacky
+const fizzBuzz = (num) => [...Array(num)].map((_, i) => i).forEach((num) => check(num))
+const check = (num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.log(`FizzBuzz`) : console.log(`Fizz`) : num % 5 === 0 ? console.log(`Buzz`) : console.log(num)
