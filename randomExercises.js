@@ -683,5 +683,4 @@ const binarySearch = (d, t, s, e) => {
 }
 
 // Fizzbuzz Hacky
-const fizzBuzz = (num) => [...Array(num)].map((_, i) => i).forEach((num) => check(num))
-const check = (num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.log(`FizzBuzz`) : console.log(`Fizz`) : num % 5 === 0 ? console.log(`Buzz`) : console.log(num)
+const fizzBuzz = (num) => [...Array(num)].map((_, i) => i).forEach((num) => num === 0 ? `` : num % 3 === 0 ? num % 5 === 0 ? console.log(`FizzBuzz`) : console.log(`Fizz`) : num % 5 === 0 ? console.log(`Buzz`) : console.log(num))
