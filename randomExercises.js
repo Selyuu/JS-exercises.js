@@ -680,3 +680,10 @@ String.prototype.indexOf = (searchValue, fromIndex) => {
     return String.prototype.indexOf()
   }
 }
+
+// Binary Search algo.
+const binarySearch = (d, t, s, e) => {
+  const m = Math.floor((s + e) / 2)
+  if (t == d[m].svgX) return d[m]
+  if 
+}
